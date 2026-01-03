@@ -1,0 +1,24 @@
+{
+  "siteTitle": "Microblading Seguro",
+  "subtitle": "Belleza y confianza para mujeres",
+  "hero": {
+    "title": "Especialista en Microblading",
+    "subtitle": "Tratamientos seguros y personalizados para mujeres.",
+    "cta": "Reservar consulta"
+  },
+  "services": [
+    {"title":"Microblading básico","desc":"Diseño y pigmentación natural, 1 sesión","price":"Desde $80"},
+    {"title":"Retoque","desc":"Retoque a las 6-8 semanas","price":"Desde $40"}
+  ],
+  "portfolio": [
+    {"image":"images/placeholder-1.svg","title":"Cliente 1","desc":"Antes y después"},
+    {"image":"images/placeholder-2.svg","title":"Cliente 2","desc":"Resultados naturales"},
+    {"image":"images/new-1.jpg","title":"Nuevo 1","desc":"Imagen nueva"},
+    {"image":"images/new-2.jpg","title":"Nuevo 2","desc":"Imagen nueva"},
+    {"image":"images/new-3.jpg","title":"Nuevo 3","desc":"Imagen nueva"}
+  ],
+  "about": {"name":"Tu Nombre","bio":"Profesional certificada en microblading con enfoque en seguridad y bienestar de mujeres.","photo":"images/placeholder-person.svg"},
+  "contact": {"email":"contacto@ejemplo.com","phone":"+34 600 000 000","instagram":"@miinsta"},
+  "whatsapp": {"number":"+34600000000","message":"Hola, quiero información sobre microblading"},
+  "footer": "© 2026 Microblading Seguro"
+}
