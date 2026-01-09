@@ -1,0 +1,12 @@
+# GitHub Pages Configuration
+theme: null
+plugins: []
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock

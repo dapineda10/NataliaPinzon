@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Debug - Verificación de funcionalidad</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #f5f5f5; }
+    .item { background: white; margin: 10px 0; padding: 10px; border-left: 4px solid #ddd; }
+    .ok { border-left-color: #4caf50; }
+    .error { border-left-color: #f44336; }
+    code { background: #eee; padding: 2px 4px; }
+  </style>
+</head>
+<body>
+  <h1>🔍 Debug: Verificación de funcionalidad</h1>
+  
+  <div class="item ok">
+    <strong>✅ HTML elementos encontrados:</strong>
+    <div id="check-elements"></div>
+  </div>
+
+  <div class="item">
+    <strong>📞 WhatsApp URL generada:</strong>
+    <div id="check-wa"></div>
+  </div>
+
+  <div class="item">
+    <strong>⚙️ Estado de los botones:</strong>
+    <div id="check-buttons"></div>
+  </div>
+
+  <script>
+    // Check 1: Elementos HTML
+    const elements = ['cta-hero', 'cta-header', 'whatsapp-fab', 'mobile-menu-button', 'mobile-menu'];
+    const results1 = elements.map(id => {
+      const el = document.getElementById(id);
+      return `${el ? '✅' : '❌'} #${id}: ${el ? 'Encontrado' : 'NO ENCONTRADO'}`;
+    });
+    document.getElementById('check-elements').innerHTML = results1.join('<br>');
+
+    // Check 2: Simular WhatsApp URL
+    fetch('config.json')
+      .then(r => r.json())
+      .then(config => {
+        const digits = config.whatsapp.number.replace(/\D+/g, '');
+        const message = encodeURIComponent(config.whatsapp.message || 'Hola');
+        const waUrl = `https://wa.me/${digits}?text=${message}`;
+        document.getElementById('check-wa').innerHTML = `<code>${waUrl}</code>`;
+
+        // Check 3: Estado actual de botones
+        const results3 = ['cta-hero', 'cta-header', 'whatsapp-fab'].map(id => {
+          const btn = document.getElementById(id);
+          return `${btn?.href === '#contacto' ? '❌' : '✅'} #${id} href: <code>${btn?.href || 'N/A'}</code>`;
+        });
+        document.getElementById('check-buttons').innerHTML = results3.join('<br>');
+      })
+      .catch(err => {
+        document.getElementById('check-wa').innerHTML = `<span style="color:red">Error: ${err.message}</span>`;
+      });
+  </script>
+</body>
+</html>
