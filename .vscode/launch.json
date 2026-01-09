@@ -1,14 +1,19 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Open index.html",
-            "file": "/home/danny/Documents/repositories/NataliaPinzon/index.html"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch localhost",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://localhost/index.html",
+      "webRoot": "${workspaceFolder}",
+      "firefoxExecutable": "/usr/bin/firefox",
+      "profile": "dev-profile",
+      "tmpDir": true,
+      "log": {
+        "fileName": "${workspaceFolder}/firefox-debug.log",
+        "level": "Debug"
+      }
+    }
+  ]
 }

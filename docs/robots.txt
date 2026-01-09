@@ -4,4 +4,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://micropigmentacion-popayan.com/sitemap.xml
+Sitemap: https://nataliapinzon.co/sitemap.xml
